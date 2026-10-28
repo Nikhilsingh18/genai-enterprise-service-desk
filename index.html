@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My IT Help Desk</title>
+    <!-- <title>Enterprise Service Desk</title> -->
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Service Desk</h1>
+        <p>Report and manage IT support requests</p>
+    </header>
+
+    <main>
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Tickets</h3>
+                <p id="totalTickets">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Open Tickets</h3>
+                <p id="openTickets">0</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Create Support Ticket</h2>
+
+            <form id="ticketForm">
+                <label for="employee">Employee Name</label>
+                <input type="text" id="employee" placeholder="Enter your name" required>
+
+                <label for="category">Issue Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="Network">Network</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Access">Account Access</option>
+                    <option value="Printer">Printer</option>
+                </select>
+
+                <label for="priority">Priority</label>
+                <select id="priority" required>
+                    <option value="Low">Low</option>
+                    <option value="Medium" selected>Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <label for="description">Describe Your Problem</label>
+                <textarea id="description" placeholder="Explain your IT problem..." required></textarea>
+
+                <button type="submit">Create Ticket</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Recent Tickets</h2>
+            <div id="ticketList">
+                <p class="empty">No tickets created yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
